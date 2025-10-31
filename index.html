@@ -28,7 +28,7 @@
     <style>
         /* Custom styles for Sinhala text and overall card aesthetic */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #e5e7eb;
         }
         .card-shadow {
@@ -40,6 +40,15 @@
         }
         .time-label {
             min-width: 6rem;
+        }
+        /* Ensure responsive text for small fractions in the meal plan */
+        .meal-detail-text {
+            font-size: 0.875rem; /* text-sm */
+        }
+        @media (min-width: 640px) {
+            .meal-detail-text {
+                font-size: 1rem; /* text-base on sm+ */
+            }
         }
     </style>
     <script>
@@ -161,7 +170,7 @@
                 <section>
                     <h2 class="text-2xl font-bold mb-6 text-primary">MAIN CIRCUIT (20 Min – Repeat 4 Times)</h2>
                     <p class="text-md text-gray-700 mb-6 font-medium">
-                        Do each exercise $\to$ rest <strong class="text-red-500">15 sec</strong> $\to$ next $\to$ <strong class="font-extrabold text-lg">Rest 30 sec</strong> between rounds
+                        Do each exercise &rarr; rest <strong class="text-red-500">15 sec</strong> &rarr; next &rarr; <strong class="font-extrabold text-lg">Rest 30 sec</strong> between rounds
                     </p>
 
                     <!-- Exercise Cards Grid -->
@@ -174,7 +183,7 @@
                                 <div class="text-lg font-bold text-primary exercise-name">බිත්තියේ තල්ලු</div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-2">Wall Push-Up</h3>
                                 <p class="text-sm text-gray-600 mb-2">**Reps:** 12–15</p>
-                                <p class="text-sm text-gray-700 italic">Hands on wall, slightly wider than shoulders $\to$ bend elbows $\to$ push back (control the movement).</p>
+                                <p class="text-sm text-gray-700 italic">Hands on wall, slightly wider than shoulders &rarr; bend elbows &rarr; push back (control the movement).</p>
                             </div>
                         </div>
 
@@ -185,7 +194,7 @@
                                 <div class="text-lg font-bold text-primary exercise-name">පුටුවේ ස්කොට්</div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-2">Chair Squat</h3>
                                 <p class="text-sm text-gray-600 mb-2">**Reps:** 15</p>
-                                <p class="text-sm text-gray-700 italic">Lower hips back until you lightly touch the chair $\to$ stand up tall, squeezing glutes.</p>
+                                <p class="text-sm text-gray-700 italic">Lower hips back until you lightly touch the chair &rarr; stand up tall, squeezing glutes.</p>
                             </div>
                         </div>
 
@@ -196,7 +205,7 @@
                                 <div class="text-lg font-bold text-primary exercise-name">දණහිස ඔසවීම</div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-2">High Knee March</h3>
                                 <p class="text-sm text-gray-600 mb-2">**Reps:** 20 per leg (40 total)</p>
-                                <p class="text-sm text-gray-700 italic">Lift knee toward hip height $\to$ maintain a fast, controlled march in place. Keep core tight.</p>
+                                <p class="text-sm text-gray-700 italic">Lift knee toward hip height &rarr; maintain a fast, controlled march in place. Keep core tight.</p>
                             </div>
                         </div>
                         
@@ -207,7 +216,7 @@
                                 <div class="text-lg font-bold text-primary exercise-name">පැත්තට කකුල ඔසවීම</div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-2">Side Leg Lift</h3>
                                 <p class="text-sm text-gray-600 mb-2">**Reps:** 12 per leg</p>
-                                <p class="text-sm text-gray-700 italic">Hold chair for balance $\to$ lift leg straight out to the side $\to$ lower slowly to the ground.</p>
+                                <p class="text-sm text-gray-700 italic">Hold chair for balance &rarr; lift leg straight out to the side &rarr; lower slowly to the ground.</p>
                             </div>
                         </div>
                         
@@ -218,7 +227,7 @@
                                 <div class="text-lg font-bold text-primary exercise-name">කලවා ඔසවීම</div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-2">Calf Raise</h3>
                                 <p class="text-sm text-gray-600 mb-2">**Reps:** 20</p>
-                                <p class="text-sm text-gray-700 italic">Rise up high on your toes $\to$ hold for 1 sec $\to$ lower slowly. Use a wall for balance if needed.</p>
+                                <p class="text-sm text-gray-700 italic">Rise up high on your toes &rarr; hold for 1 sec &rarr; lower slowly. Use a wall for balance if needed.</p>
                             </div>
                         </div>
                     </div>
@@ -230,7 +239,7 @@
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong class="font-semibold">Slow Walk</strong> around room – 3 min</li>
                         <li><strong class="font-semibold">Deep Breathing</strong> – 1 min (Inhale 4 sec, Exhale 6 sec)</li>
-                        <li><strong class="font-semibold">Gentle Stretch</strong> – 1 min (Touch toes $\to$ reach arms up high)</li>
+                        <li><strong class="font-semibold">Gentle Stretch</strong> – 1 min (Touch toes &rarr; reach arms up high)</li>
                     </ul>
                 </section>
 
@@ -277,16 +286,16 @@
                     <!-- Benefits -->
                     <div class="p-6 bg-green-50 rounded-2xl border-2 border-primary">
                         <h2 class="text-xl font-bold mb-3 text-primary">EXPECTED BENEFITS</h2>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-center"><span class="font-extrabold text-lg text-primary mr-3">↑</span> **HDL ("good" cholesterol):** $\uparrow 4-8\ \text{mg/dL}$</li>
-                            <li class="flex items-center"><span class="font-extrabold text-lg text-red-600 mr-3">↓</span> **LDL ("bad"):** $\downarrow 10-15\ \text{mg/dL}$ (with diet)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">⚡️</span> **Energy:** $\uparrow\uparrow$ (less fatigue at 11 PM)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">⚖️</span> **Weight:** $\downarrow 1-2\ \text{kg}$ (Good start!)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">❤️</span> **Heart Health:** Stronger (Meeting AHA's $150\ \text{min/week}$ goal)</li>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li class="flex items-center"><span class="font-extrabold text-lg text-primary mr-3">&uarr;</span> **HDL ("good" cholesterol):** &uarr; 4-8 mg/dL</li>
+                            <li class="flex items-center"><span class="font-extrabold text-lg text-red-600 mr-3">&darr;</span> **LDL ("bad"):** &darr; 10-15 mg/dL (with diet)</li>
+                            <li class="flex items-center"><span class="text-xl mr-3">⚡️</span> **Energy:** &uarr;&uarr; (less fatigue at 11 PM)</li>
+                            <li class="flex items-center"><span class="text-xl mr-3">⚖️</span> **Weight:** &darr; 1-2 kg (Good start!)</li>
+                            <li class="flex items-center"><span class="text-xl mr-3">❤️</span> **Heart Health:** Stronger (Meeting AHA's 150 min/week goal)</li>
                         </ul>
                     </div>
                 </section>
-                
+
                 <!-- Safety & Tips and Printable Card -->
                 <section class="grid md:grid-cols-2 gap-8">
                     <!-- Safety -->
@@ -348,7 +357,7 @@ Name: ____________________  Day: ___
                         <div class="bg-white p-4 rounded-lg shadow-md border-t-2 border-yellow-300">
                             <strong class="text-md font-semibold text-yellow-700 block mb-2">10:30 AM: 🍽️ MEAL 1: HEART-HEALTHY BREAKFAST</strong>
                             <ul class="list-disc list-inside text-gray-700 text-sm ml-2">
-                                <li>**What:** ½ cup <strong class="font-medium">oats</strong> (cooked in water/low-fat milk) + <strong class="font-medium">1 boiled egg</strong> + <strong class="font-medium">1 small banana</strong> (sliced).</li>
+                                <li>**What:** 1/2 cup <strong class="font-medium">oats</strong> (cooked in water/low-fat milk) + <strong class="font-medium">1 boiled egg</strong> + <strong class="font-medium">1 small banana</strong> (sliced).</li>
                                 <li>**Why:** Oats lower LDL. Egg raises HDL. Banana gives energy.</li>
                             </ul>
                         </div>
@@ -359,7 +368,7 @@ Name: ____________________  Day: ___
                         <div class="bg-white p-4 rounded-lg shadow-md border-t-2 border-yellow-300">
                             <strong class="text-md font-semibold text-yellow-700 block mb-2">1:30 PM: 🍽️ MEAL 2: FILLING LUNCH BEFORE WORK</strong>
                             <ul class="list-disc list-inside text-gray-700 text-sm ml-2">
-                                <li>**What:** ½ cup <strong class="font-medium">red rice</strong> + <strong class="font-medium">Dhal curry</strong> (no coconut milk, use tomato/garlic) + <strong class="font-medium">Gotukola mallum</strong>.</li>
+                                <li>**What:** 1/2 cup <strong class="font-medium">red rice</strong> + <strong class="font-medium">Dhal curry</strong> (no coconut milk, use tomato/garlic) + <strong class="font-medium">Gotukola mallum</strong>.</li>
                                 <li>**Optional:** Small piece (100g) of baked fish.</li>
                                 <li>**Why:** High fiber from rice + greens lowers cholesterol.</li>
                             </ul>
@@ -380,8 +389,8 @@ Name: ____________________  Day: ___
                         <div class="bg-white p-4 rounded-lg shadow-md border-t-2 border-teal-300">
                             <strong class="text-md font-semibold text-teal-700 block mb-2">5:30 PM: 🍽️ MEAL 3: MID-WORK SNACK</strong>
                             <ul class="list-disc list-inside text-gray-700 text-sm ml-2">
-                                <li>**What:** <strong class="font-medium">10 almonds</strong> (raw/roasted, no salt) + <strong class="font-medium">1 apple</strong> + ½ cup low-fat curd.</li>
-                                <li>**Why:** Stops hunger $\to$ prevents late-night binge eating.</li>
+                                <li>**What:** <strong class="font-medium">10 almonds</strong> (raw/roasted, no salt) + <strong class="font-medium">1 apple</strong> + 1/2 cup low-fat curd.</li>
+                                <li>**Why:** Stops hunger &rarr; prevents late-night binge eating.</li>
                             </ul>
                         </div>
                         
@@ -420,7 +429,7 @@ Name: ____________________  Day: ___
                         </div>
                         <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white p-3 rounded-lg shadow-sm">
                             <strong class="time-label text-sm font-semibold text-blue-600 mr-4">12:00 AM:</strong>
-                            <p class="text-gray-700">🛌 **SLEEP** - Aim for 10 hours (12 AM $\to$ 10 AM). Use blackout curtains/earplugs.</p>
+                            <p class="text-gray-700">🛌 **SLEEP** - Aim for 10 hours (12 AM &rarr; 10 AM). Use blackout curtains/earplugs.</p>
                         </div>
                     </div>
 
@@ -444,16 +453,16 @@ Name: ____________________  Day: ___
                                 </tr>
                                 <tr class="border-b">
                                     <td class="py-2 px-3 font-semibold text-blue-500">2:15 AM</td>
-                                    <td class="py-2 px-3 text-gray-700">Quick face wash $\to$ **Meal 4** (if not already eaten)</td>
+                                    <td class="py-2 px-3 text-gray-700">Quick face wash &rarr; **Meal 4** (if not already eaten)</td>
                                 </tr>
                                 <tr>
                                     <td class="py-2 px-3 font-semibold text-blue-500">2:30 AM</td>
-                                    <td class="py-2 px-3 text-gray-700">**Sleep** $\to$ wake at **10:00 AM** (7.5 hrs)</td>
+                                    <td class="py-2 px-3 text-gray-700">**Sleep** &rarr; wake at **10:00 AM** (7.5 hrs)</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-3 text-sm italic text-gray-600">Goal: Still get 7+ hrs sleep $\to$ body adapts in 1 week.</p>
+                    <p class="mt-3 text-sm italic text-gray-600">Goal: Still get 7+ hrs sleep &rarr; body adapts in 1 week.</p>
                 </section>
                 
                 <!-- Weekly Summary & Checklist -->
@@ -514,7 +523,7 @@ Name: ____________________  Day: ___
                 <section class="bg-red-50 p-6 rounded-2xl border-l-4 border-red-600 shadow-lg">
                     <h3 class="text-xl font-bold mb-4 text-red-800">🍽️ GENERAL RULES (HIGH LDL FOCUS)</h3>
                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                        <li>**4 meals only** $\to$ stops hunger, controls cholesterol spikes.</li>
+                        <li>**4 meals only** &rarr; stops hunger, controls cholesterol spikes.</li>
                         <li>**No Coconut:** Absolutely **no coconut milk**, sambol, or coconut oil.</li>
                         <li>**Max Oil:** Use a maximum of **2 tsp olive oil** for *all* daily cooking.</li>
                         <li>**Hydration:** Drink **2.5 L water** + **2 cups green tea** (no sugar).</li>
@@ -530,19 +539,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Oats & Egg:</strong> $\frac{1}{2}$ cup oats (hot water) + 1 boiled egg + 1 small banana. <em class="text-xs italic">(Lowers LDL)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Oats & Egg:</strong> 1/2 cup oats (hot water) + 1 boiled egg + 1 small banana. <em class="text-xs italic">(Lowers LDL)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> $\frac{1}{2}$ cup red rice + Dhal curry (no coconut, with tomato/garlic) + Gotukola mallum. Optional: 100g baked fish.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> 1/2 cup red rice + Dhal curry (no coconut, with tomato/garlic) + Gotukola mallum. Optional: 100g baked fish.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Desk Snack:</strong> 10 raw almonds + 1 apple + $\frac{1}{2}$ cup low-fat curd.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Desk Snack:</strong> 10 raw almonds + 1 apple + 1/2 cup low-fat curd.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Light Roti:</strong> 2 whole wheat roti + Beans curry (no coconut, with onion/tomato) + cucumber slices.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Light Roti:</strong> 2 whole wheat roti + Beans curry (no coconut, with onion/tomato) + cucumber slices.</p>
                             </div>
                         </div>
                     </div>
@@ -553,19 +562,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Egg White Boost:</strong> 2 egg whites (boiled) + 1 slice wholemeal bread + $\frac{1}{2}$ papaya.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Egg White Boost:</strong> 2 egg whites (boiled) + 1 slice wholemeal bread + 1/2 papaya.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Brown Rice Combo:</strong> $\frac{1}{2}$ cup brown rice + Mung bean curry + Kankun mallum. <em class="text-xs italic">(High fiber)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Brown Rice Combo:</strong> 1/2 cup brown rice + Mung bean curry + Kankun mallum. <em class="text-xs italic">(High fiber)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> $\frac{1}{4}$ cup roasted chickpeas (dry roast) + 1 orange.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> 1/4 cup roasted chickpeas (dry roast) + 1 orange.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Light Kottu:</strong> Vegetable kottu (no egg/oil fry) + Cucumber raita (curd + grated cucumber).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Light Kottu:</strong> Vegetable kottu (no egg/oil fry) + Cucumber raita (curd + grated cucumber).</p>
                             </div>
                         </div>
                     </div>
@@ -576,19 +585,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Kurakkan Thalapa:</strong> 1 thalapa + Seeni sambol (no coconut) + 1 boiled egg.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Kurakkan Thalapa:</strong> 1 thalapa + Seeni sambol (no coconut) + 1 boiled egg.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> $\frac{1}{2}$ cup red rice + Jackfruit seed curry + Mukunuwenna mallum. <em class="text-xs italic">(Local superfood)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> 1/2 cup red rice + Jackfruit seed curry + Mukunuwenna mallum. <em class="text-xs italic">(Local superfood)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> 1 glass fresh carrot juice (blended, strained).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> 1 glass fresh carrot juice (blended, strained).</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Comfort Food:</strong> 5 string hoppers + Potato curry (boiled, no coconut milk).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Comfort Food:</strong> 5 string hoppers + Potato curry (boiled, no coconut milk).</p>
                             </div>
                         </div>
                     </div>
@@ -599,19 +608,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Oats Upma:</strong> Dry-roasted $\frac{1}{2}$ cup oats + veg + water + 1 poached egg.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Oats Upma:</strong> Dry-roasted 1/2 cup oats + veg + water + 1 poached egg.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> $\frac{1}{2}$ cup red rice + Chickpea curry + Spinach mallum. <em class="text-xs italic">(Plant protein)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> 1/2 cup red rice + Chickpea curry + Spinach mallum. <em class="text-xs italic">(Plant protein)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> Green gram sprout salad (sprouts + onion/tomato/lime).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> Green gram sprout salad (sprouts + onion/tomato/lime).</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Light Pasta:</strong> Whole wheat pasta ($\frac{1}{2}$ cup) + Tomato-onion sauce + 50g grilled chicken (skinless).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Light Pasta:</strong> Whole wheat pasta (1/2 cup) + Tomato-onion sauce + 50g grilled chicken (skinless).</p>
                             </div>
                         </div>
                     </div>
@@ -622,19 +631,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Avocado Toast:</strong> 1 slice bread + $\frac{1}{4}$ avocado mashed with lime + 1 boiled egg. <em class="text-xs italic">(Healthy fats)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Avocado Toast:</strong> 1 slice bread + 1/4 avocado mashed with lime + 1 boiled egg. <em class="text-xs italic">(Healthy fats)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Brown Rice Combo:</strong> $\frac{1}{2}$ cup brown rice + Ladies’ fingers curry + Beetroot mallum.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Brown Rice Combo:</strong> 1/2 cup brown rice + Ladies’ fingers curry + Beetroot mallum.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> Cucumber slices + $\frac{1}{2}$ cup low-fat curd.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> Cucumber slices + 1/2 cup low-fat curd.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Brown Fried Rice:</strong> $\frac{1}{2}$ cup rice + veg (stir in $\frac{1}{2}$ tsp oil) + 2 scrambled egg whites.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Brown Fried Rice:</strong> 1/2 cup rice + veg (stir in 1/2 tsp oil) + 2 scrambled egg whites.</p>
                             </div>
                         </div>
                     </div>
@@ -645,19 +654,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">String Hoppers:</strong> 4 hoppers + Onion-tomato-lime salsa + 1 egg.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">String Hoppers:</strong> 4 hoppers + Onion-tomato-lime salsa + 1 egg.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> $\frac{1}{2}$ cup red rice + Dhal + Karawila mallum. <em class="text-xs italic">(Blood-sugar friendly)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Red Rice Combo:</strong> 1/2 cup red rice + Dhal + Karawila mallum. <em class="text-xs italic">(Blood-sugar friendly)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> 12 roasted peanuts (unsalted).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> 12 roasted peanuts (unsalted).</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Chapati & Soya:</strong> 2 chapati + Soya meat curry (tomato/onion base).</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Chapati & Soya:</strong> 2 chapati + Soya meat curry (tomato/onion base).</p>
                             </div>
                         </div>
                     </div>
@@ -668,19 +677,19 @@ Name: ____________________  Day: ___
                         <div class="space-y-3">
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">10:30 AM (M1)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Oats & Chia:</strong> $\frac{1}{2}$ cup oats + 1 tsp chia seeds (soaked) + 1 boiled egg. <em class="text-xs italic">(Omega-3 boost)</em></p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Oats & Chia:</strong> 1/2 cup oats + 1 tsp chia seeds (soaked) + 1 boiled egg. <em class="text-xs italic">(Omega-3 boost)</em></p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">1:30 PM (M2)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Kurakkan Rice Combo:</strong> $\frac{1}{2}$ cup Kurakkan rice + Lentil curry + Nai miris mallum. </p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Kurakkan Rice Combo:</strong> 1/2 cup Kurakkan rice + Lentil curry + Nai miris mallum. </p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">5:30 PM (M3)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Snack:</strong> Fresh Tomato + onion salad with lime.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Snack:</strong> Fresh Tomato + onion salad with lime.</p>
                             </div>
                             <div class="bg-white p-3 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
                                 <strong class="w-28 flex-shrink-0 text-sm font-semibold text-gray-600">11:00 PM (M4)</strong>
-                                <p class="text-sm text-gray-700"><strong class="text-primary">Light Soup:</strong> Vegetable soup (carrot/leek/beans) + 1 slice bread + 100g grilled fish.</p>
+                                <p class="meal-detail-text text-gray-700"><strong class="text-primary">Light Soup:</strong> Vegetable soup (carrot/leek/beans) + 1 slice bread + 100g grilled fish.</p>
                             </div>
                         </div>
                     </div>
@@ -692,10 +701,10 @@ Name: ____________________  Day: ___
                     <div class="p-6 bg-yellow-50 rounded-2xl border-2 border-yellow-400">
                         <h2 class="text-xl font-bold mb-3 text-yellow-800">🔥 MEAL PREP HACKS (Do on Sunday)</h2>
                         <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
-                            <li>**Boil eggs** $\to$ fridge (last 5 days).</li>
-                            <li>**Cook dhal + rice** in bulk $\to$ portion in boxes.</li>
-                            <li>**Chop mallum veg** $\to$ store in containers.</li>
-                            <li>**Make roti** $\to$ wrap and freeze/fridge.</li>
+                            <li>**Boil eggs** &rarr; fridge (last 5 days).</li>
+                            <li>**Cook dhal + rice** in bulk &rarr; portion in boxes.</li>
+                            <li>**Chop mallum veg** &rarr; store in containers.</li>
+                            <li>**Make roti** &rarr; wrap and freeze/fridge.</li>
                         </ul>
                     </div>
                     
@@ -703,10 +712,10 @@ Name: ____________________  Day: ___
                     <div class="p-6 bg-green-50 rounded-2xl border-2 border-primary">
                         <h2 class="text-xl font-bold mb-3 text-primary">🎯 4-WEEK IMPACT GOALS (Meal Plan)</h2>
                         <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
-                            <li>**LDL** $\downarrow 15-25\ \text{mg/dL}$ (due to fiber/low fat)</li>
+                            <li>**LDL** &darr; 15-25 mg/dL (due to fiber/low fat)</li>
                             <li>**No hunger** at 11 PM</li>
                             <li>Better skin & energy</li>
-                            <li>**Weight loss** of $1-3\ \text{kg}$ expected</li>
+                            <li>**Weight loss** of 1-3 kg expected</li>
                         </ul>
                     </div>
                 </section>
@@ -718,7 +727,7 @@ Name: ____________________  Day: ___
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
                         <div class="font-semibold text-primary">Grains/Staples:</div>
                         <div class="col-span-3 text-gray-700">Red/Brown Rice, Oats, Roti, Wholemeal Bread, Whole Wheat Pasta.</div>
-                        <div class="font-semibold text-primary">Protein/Dahl:</div>
+                        <div class="font-semibold text-primary">Protein/Dhal:</div>
                         <div class="col-span-3 text-gray-700">Dhal, Eggs, Chickpeas, Soya Meat, Fish/Chicken (lean cuts).</div>
                         <div class="font-semibold text-primary">Vegetables:</div>
                         <div class="col-span-3 text-gray-700">Gotukola, Kankun, Beans, Carrot, Cucumber, Tomato, Onion, Garlic.</div>
